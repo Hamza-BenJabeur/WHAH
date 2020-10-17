@@ -1,0 +1,66 @@
+<div class="all">
+<div class="wrapper">
+  <div class="title">Registration Form</div>
+  <div class="form">
+    <div class="inputfield">
+      <label>email</label>
+      <input #email type="text" class="input" name="email" />
+    </div>
+    <div class="inputfield">
+      <label>Owner</label>
+      <input #owner type="text" class="input" name="owner" />
+    </div>
+    <div class="inputfield">
+      <label>Training Options</label>
+      <input #trainingOptions type="text" class="input" name="trainingOptions" />
+    </div>
+    <div class="inputfield">
+      <label>Number Of Student Graduated </label>
+      <input
+        #numberOfStudent
+        type="text"
+        class="input"
+        name="numberOfStudent"
+      />
+    </div>
+    <div class="inputfield">
+      <label>About</label>
+      <textarea #about class="textarea" name="about"></textarea>
+    </div>
+    <div class="inputfield">
+      <label>Location</label>
+      <input #location type="text" class="input" name="location" />
+    </div>
+    <div class="inputfield">
+      <label>WebSite</label>
+      <input #website type="text" class="input" name="website" />
+    </div>
+    <div class="inputfield">
+      <label>Logo</label>
+      <input #logo type="file" class="input" name="logo" />
+    </div>
+
+    <div class="inputfield">
+      <button
+        (click)="
+          takedata(
+            email.value,
+            owner.value,
+            trainingOptions.value,
+            numberOfStudent.value,
+            location.value,
+            website.value,
+            logo.value,
+            about.value
+          )
+        "
+        class="btn"
+      >
+        Registration
+      </button>
+    </div>
+  </div>
+</div>
+
+
+</div>

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "education"
+    }
+  },
+  "defaultProject": "education",
+  "cli": {
+    "analytics": false
+  }
 }

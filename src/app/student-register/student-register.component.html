@@ -1,0 +1,120 @@
+<!-- <div class="container">
+    <form>
+      <div class="form-group">
+        <h1 class="text-center text-primary">signup page</h1>
+        <div>
+          <span class="input-group-text">username</span>
+          <input #username type="text" class="form-control" name="username" />
+          <span class="input-group-text">email</span>
+          <input #email type="text" class="form-control" name="email" />
+          <span class="input-group-text">secret info</span>
+          <input #secretinfo type="text" class="form-control" name="secretinfo" />
+          <span class="input-group-text">password</span>
+          <input #password type="text" class="form-control" name="password" />
+          <span class="input-group-text">repeat password</span>
+          <input type="text" #reppassword class="form-control" name="password" />
+        </div>
+      </div>
+    </form>
+    <button
+      (click)="
+        collect(
+          username.value,
+          email.value,
+          secretinfo.value,
+          password.value,
+          reppassword.value
+        )
+      "
+    >
+      submit
+    </button>
+  </div>
+  
+  <p>if you already have acount <a href="#" routerLink="login">login</a></p> -->
+
+  <!-- <div class="container">
+    <form>
+      <div class="form-group">
+        <h1 class="text-center text-primary">signup page</h1>
+        <div>
+          <span class="input-group-text">name</span>
+          <input #name type="text" class="form-control" name="name" />
+          <span class="input-group-text">password</span>
+          <input #password type="text" class="form-control" name="password" />
+          <span class="input-group-text">repeatPassword</span>
+          <input
+            #reppassword
+            type="text"
+            class="form-control"
+            name="reppassword"
+          />
+        </div>
+      </div>
+    </form>
+    <button (click)="addTC(name.value, password.value)">submit</button>
+  </div>
+  
+  <p>if you already have acount <a href="#" routerLink="login">login</a></p> -->
+
+
+  
+<div class="container">
+  <div class="forms-container">
+    <div class="signin-signup">
+      <form action="#" class="sign-up-form">
+        <h2 class="title">Sign up</h2>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input #name type="text" placeholder="Username" name="name" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input #email type="text" placeholder="email" name="email" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input #secretinfo type="text" placeholder="secretinfo" name="secretinfo" />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-lock"></i>
+          <input #password type="password" placeholder="Password" name="password"/>
+        </div>
+        <input type="submit" (click)=" collect( name.value,email.value,secretinfo.value,password.value) " class="btn" value="Sign up" />
+        <p class="social-text">Or Sign up with social platforms</p>
+        <div class="social-media">
+          <a href="#" class="social-icon">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="panels-container">
+  <div class="panel left-panel">
+    <div class="content">
+      <h3>One of us ?</h3>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
+        ex ratione. Aliquid!
+      </p>
+      <button class="btn transparent" id="sign-up-btn" (click)="signin()">
+        Sign in
+      </button>
+    </div>
+  </div>
+</div>
+
+
+

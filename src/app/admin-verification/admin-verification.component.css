@@ -1,0 +1,15 @@
+.all{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    background-color: rgb(180 162 162 / 26%);
+}
+
+table{
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}

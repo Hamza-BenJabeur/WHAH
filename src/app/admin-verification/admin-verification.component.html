@@ -1,0 +1,108 @@
+<div class="all">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Student</th>
+        <th scope="col">Verify</th>
+        <th scope="col">Reject</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let element of NonValidStudents">
+      <tr>
+        {{
+          this.element?.username
+        }}
+        <th>
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="verifie(this.element?.username)"
+          >
+            Verify
+          </button>
+        </th>
+        <th>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="reject(this.element?.username)"
+          >
+            Reject
+          </button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Company</th>
+        <th scope="col">Verify</th>
+        <th scope="col">Reject</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let element of NonValidCompanies">
+      <tr>
+        {{
+          this.element?.name
+        }}
+        <th>
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="verifieCompanies(this.element?.name)"
+          >
+            Verify
+          </button>
+        </th>
+        <th>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="rejectCompanies(this.element?.name)"
+          >
+            Reject
+          </button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Training</th>
+        <th scope="col">Verify</th>
+        <th scope="col">Reject</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let element of NonValidCenters">
+      <tr>
+        {{
+          this.element?.name
+        }}
+        <th>
+          <button
+            type="button"
+            class="btn btn-success"
+            (click)="verifieCenter(this.element?.name)"
+          >
+            Verify
+          </button>
+        </th>
+        <th>
+          <button
+            type="button"
+            class="btn btn-danger"
+            (click)="rejectCenter(this.element?.name)"
+          >
+            Reject
+          </button>
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<button (click)="goback()">go back to land</button>
