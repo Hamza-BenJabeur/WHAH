@@ -1,6 +1,9 @@
 DROP DATABASE IF EXISTS eduproject;
 CREATE DATABASE eduproject;
 USE eduproject;
+CREATE TABLE saveloger(
+       name VARCHAR(50) NOT NULL
+);
 CREATE TABLE students(
     id INT(4) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     firstname VARCHAR (50),
@@ -63,4 +66,4 @@ CREATE TABLE trainingCenters(
     verification VARCHAR (10)   DEFAULT 'false' , 
     verRequest VARCHAR (10)   DEFAULT 'false' , 
     firstTime VARCHAR (10)   DEFAULT 'true'
-)
+);

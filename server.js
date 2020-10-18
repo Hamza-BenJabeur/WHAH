@@ -53,16 +53,22 @@ app.get('/account', ensureAuthenticated, function (req, res) {
 app.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' }));
 
-app.get('/google/callback', passport.authenticate('google', { failureRedirect: '/failed' }),
+app.get('/google/callback', passport.authenticate('google', { successRedirect: '/', failureRedirect: '/failed' }),
   function (req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    var arr = [req.user.displayName]
+    db.save(arr, (err, data) => {
+      err ? console.log(err) : res.send('/');
+    })
+    // res.redirect('/');
+    // res.send(req.user);
   }
 );
 app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { successRedirect: '/', failureRedirect: '/login' }),
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
   function (req, res) {
-    res.redirect('/');
+    // res.redirect('/');
+    res.send(req.user);
   });
 
 

@@ -177,6 +177,14 @@ const addStudent = (arr, callback) => {
     callback(null, data);
   });
 };
+//save loger
+const save=(arr,callback)=>{
+  let query="insert into saveloger (name) values (?)";
+  connection.query(query,arr,(err,data)=>{
+    err? console.log(err):callback(null,data);
+  })
+}
+///////////////////////////
 
 
 
@@ -262,5 +270,6 @@ module.exports = {
   logTC,
   getUserStatus,
   getCompanyStatus,
-  getCenterStatus
+  getCenterStatus,
+  save
 };
